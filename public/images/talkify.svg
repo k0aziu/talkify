@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="640" height="640" viewBox="0 0 640 640" xml:space="preserve">
+<desc>Created with Fabric.js 5.3.0</desc>
+<defs>
+</defs>
+<g transform="matrix(1.1055743382 0 0 1.1055743382 320 320)" id="XJXQW1BLZGqIr4tARRnzz"  >
+<path style="stroke: rgb(100,78,37); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"  transform=" translate(0, 0)" d="M 0 -248.73949 C 137.3042 -248.73949 248.73949 -137.30419999999998 248.73949 0 C 248.73949 137.3042 137.30419999999998 248.73949 0 248.73949 C -137.3042 248.73949 -248.73949 137.30419999999998 -248.73949 0 C -248.73949 -137.3042 -137.30419999999998 -248.73949 0 -248.73949 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(0.8 0 0 0.80085688 320 320)" id="3Ekqds3Wtwlk5NIDVY2nI"  >
+<path style="stroke: rgb(184,226,107); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(52,152,219); fill-rule: nonzero; opacity: 1;"  transform=" translate(-250, -250)" d="M 250 0 C 388 0 500 112 500 250 C 500 382.74850000000004 396.36198 491.43818 265.6368 499.51817 L 265.6368 500 C 265.63646 500 250.00034 500 250 500 C 249.99966 500 249.99933 500 249.99899 500 L 99.04337999999998 500 C 44.343229999999984 500 -1.4210854715202004e-14 458.86433999999997 -1.4210854715202004e-14 408.12092 L -1.4210854715202004e-14 250 C -1.4210854715202004e-14 112 111.99999999999999 0 250 0 z M 60 250 C 60 354.88 145.12 440 250 440 C 354.88 440 440 354.88 440 250 C 440 145.12 354.88 60 250 60 C 145.12 60 60 145.12 60 250 C 60 250 60 250 60 250 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1.4414062327 0 0 1.4414062327 320 320)" id="czq6ldNRrV6c4F2iqE4bG"  >
+<path style="stroke: rgb(213,22,75); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(52,152,219); fill-rule: nonzero; opacity: 1;"  transform=" translate(0, 0)" d="M 0 -41.62602 C 22.97756 -41.62602 41.62602 -22.977559999999997 41.62602 0 C 41.62602 22.97756 22.977559999999997 41.62602 0 41.62602 C -22.97756 41.62602 -41.62602 22.977559999999997 -41.62602 0 C -41.62602 -22.97756 -22.977559999999997 -41.62602 0 -41.62602 z" stroke-linecap="round" />
+</g>
+</svg>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css_all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Talkify</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/Talkify.svg" alt="logo" id="logo">
+        <h1>Talkify</h1>
+        <div class="social">
+            <a href="https://github.com/koziuu" target="_blank"><img src="images/github.svg" alt="github"></a>
+            <a href="https://discord.com/users/725816686296432761" target="_blank"><img src="images/discord.svg" alt="discord"></a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h3>Płeć, wiek</h3>
+        <div class="chat-box" id="chatBox">
+            <!-- Tutaj będą wyświetlane wiadomości czatu -->
+        </div>
+        <div class="input-group">
+            <input type="text" id="messageInput" placeholder="Napisz wiadomość..." />
+            <button id="sendBtn">Wyślij</button>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById("chatBox");
+        const messageInput = document.getElementById("messageInput");
+        const sendBtn = document.getElementById("sendBtn");
+
+        const ws = new WebSocket("ws://localhost:3000");
+
+        ws.addEventListener("open", () => {
+            console.log("Połączono z serwerem WebSocket.");
+        });
+
+        ws.addEventListener("message", (event) => {
+            const content = event.data;
+            addMessage(content, false);
+        });
+
+        function addMessage(content, sender) {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = `message ${sender ? "sender" : "receiver"}`;
+            messageDiv.textContent = content;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        sendBtn.addEventListener("click", () => {
+            const content = messageInput.value;
+            if (content.trim() !== "") {
+                ws.send(content); // Wysyłanie wiadomości przez WebSocket
+                addMessage(content, true);
+                messageInput.value = "";
+            }
+        });
+
+        messageInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                sendBtn.click();
+            }
+        });
+    </script>
+</body>
+
+</html>
