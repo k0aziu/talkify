@@ -1,0 +1,29 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='css/css_all.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=REM:wght@100&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/index.css')
+  title Talkify - Aplikacja Czatu
+header
+  img#logo(src='images/talkify.svg' alt='logo')
+  h1 Talkify
+  .social
+    a(href='https://github.com/koziuu' target='_blank')
+      img(src='images/github.svg' alt='github')
+    a(href='https://discord.com/users/725816686296432761' target='_blank')
+      img(src='images/discord.svg' alt='discord')
+.container
+  .menu
+    a(href='/random')
+      button#joinRoomBtn Losowy Chat
+    a(href='/rooms')
+      button#joinRoomBtn Pokoje Tematyczne
+    a(href='/room-x123')
+      button#joinRoomBtn Własne Pokoje

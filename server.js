@@ -1,49 +1,31 @@
-const express = require("express");
-const http = require("http");
-// const WebSocket = require("ws");
-const path = require("path");
+const express = require("express")
+const http = require("http")
+const path = require("path")
+const helmet = require("helmet")
 
-const app = express();
-const server = http.createServer(app);
-// const wss = new WebSocket.Server({ server });
+const app = express()
+const server = http.createServer(app)
 
-const router = express.Router();
+app.use(helmet())
 
-router.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname + "/index.html"));
-});
+app.use(express.static('public'))
 
-router.get("/chat", function (req, res) {
-    res.sendFile(path.join(__dirname + "/chat.html"));
-});
+app.set("view engine", "pug")
+app.set("views", path.join(__dirname, "views"))
 
-router.get("/custom-room", function (req, res) {
-    res.sendFile(path.join(__dirname + "/room.html"));
-});
+app.get("/", (req, res) => {
+    res.render("index")
+})
 
-app.use(express.static('public'));
-app.use("/", router);
+app.get("/chat", (req, res) => {
+    res.render("chat")
+})
 
-// wss.on("connection", (ws) => {
-//     console.log("Nowe połączenie WebSocket!");
+app.get("/room", (req, res) => {
+    res.render("room")
+})
 
-//     ws.on("message", (message) => {
-//         console.log(`Otrzymano wiadomość: ${message}`);
-        
-//         // Przykład: Odsyłamy otrzymaną wiadomość do wszystkich klientów (broadcast)
-//         // wss.clients.forEach((client) => {
-//         //     if (client !== ws && client.readyState === WebSocket.OPEN) {
-//         //         client.send(message);
-//         //     }
-//         // });
-//     });
-
-//     ws.on("close", () => {
-//         console.log("Połączenie WebSocket zostało zamknięte.");
-//     });
-// });
-
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 server.listen(port, () => {
-    console.log(`Serwer wystartował http://localhost:${port}/ 🚀`);
-});
+    console.log(`Serwer wystartował http://localhost:${port}/ 🚀`)
+})
