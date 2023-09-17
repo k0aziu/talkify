@@ -1,22 +1,12 @@
-describe("Strona główna", () => {
+describe("Strona 404", () => {
   beforeEach(() => {
-    cy.visit("localhost:3000/");
+    cy.visit("localhost:3000/jand", { failOnStatusCode: false });
   });
 
-  it("Powinien przenosić na stronę Losowego Chatu", () => {
-    cy.contains("Losowy Chat").click();
-    cy.url().should("include", "/random");
-  });
-
-  it("Powinien przenosić na stronę Pokojów Tematycznych", () => {
-    cy.contains("Pokoje Tematyczne").click();
-    cy.url().should("include", "/rooms");
-  });
-
-  it("Powinien przenosić na stronę Własnych Pokojów z losowymi znakami w URL", () => {
-    cy.contains("Własne Pokoje").click();
-    cy.url().should("match", /\/room-[a-zA-Z0-9]+$/);
-  });
+  it("Back button", () => {
+    cy.get(".img-nav-back").click();
+    cy.url().should("eq", 'http://localhost:3000/')
+  })
 
   it("Powinien otwierać link do GitHuba w nowej karcie", () => {
     cy.get("a[href='https://github.com/koziuu']").should("have.attr", "target", "_blank");

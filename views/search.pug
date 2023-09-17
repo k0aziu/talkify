@@ -11,7 +11,7 @@ html(lang='pl')
     link(rel='stylesheet' href='css/global.css')
     link(rel='stylesheet' href='css/utilities.css')
     link(rel='stylesheet' href='css/social.css')
-    link(rel='stylesheet' href='css/room.css')
+    link(rel='stylesheet' href='css/search.css')
 
     link(rel='icon' href='favicon.ico' type='image/x-icon')
     link(rel='shortcut icon' href='favicon.ico' type='image/x-icon')
@@ -28,11 +28,21 @@ html(lang='pl')
           img(src='images/github.svg' alt='github')
         a(href='https://discord.com/users/725816686296432761' target='_blank')
           img(src='images/discord.svg' alt='discord')
-
-    .container-big.flex-column-center
-      h3 P&lstrok;e&cacute;, wiek
-      #chatBox.chat-box
-      .input-group
-        input#messageInput(type='text' placeholder='Napisz wiadomość...')
-        button#sendBtn Wy&sacute;lij
-    script(src='scripts/chat.js')
+    .container-big.flex-column
+      p.desc-1 Pokoje tematyczne
+      table
+        thead
+          tr
+            th Nazwa
+            th Opis
+            th Kod
+            th Ilość osób
+            th Dołącz
+        tbody
+          tr
+            td Nazwa pokoju
+            td Opis pokoju
+            td IAs7J8SA
+            td 5
+            td
+              a(href='/room-IAs7J8SA').a-text Dołącz

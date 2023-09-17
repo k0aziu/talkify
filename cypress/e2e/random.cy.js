@@ -1,6 +1,6 @@
 describe("Strona Random chat", () => {
   beforeEach(() => {
-    cy.visit("/random");
+    cy.visit("localhost:3000/random");
   });
 
   it("Powinien przekierować na stronę główną po kliknięciu przycisku 'Back'", () => {

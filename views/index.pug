@@ -1,29 +1,50 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  link(rel='stylesheet' href='css/css_all.css')
-  link(rel='preconnect' href='https://fonts.googleapis.com')
-  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-  link(href='https://fonts.googleapis.com/css2?family=REM:wght@100&display=swap' rel='stylesheet')
-  link(rel='preconnect' href='https://fonts.googleapis.com')
-  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-  link(href='https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap' rel='stylesheet')
-  link(rel='stylesheet' href='css/index.css')
-  title Talkify - Aplikacja Czatu
-header
-  img#logo(src='images/talkify.svg' alt='logo')
-  h1 Talkify
-  .social
-    a(href='https://github.com/koziuu' target='_blank')
-      img(src='images/github.svg' alt='github')
-    a(href='https://discord.com/users/725816686296432761' target='_blank')
-      img(src='images/discord.svg' alt='discord')
-.container
-  .menu
-    a(href='/random')
-      button#joinRoomBtn Losowy Chat
-    a(href='/rooms')
-      button#joinRoomBtn Pokoje Tematyczne
-    a(href='/room-x123')
-      button#joinRoomBtn Własne Pokoje
+html(lang='pl')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap' rel='stylesheet')
+
+    link(rel='stylesheet' href='css/global.css')
+    link(rel='stylesheet' href='css/utilities.css')
+    link(rel='stylesheet' href='css/social.css')
+
+    link(rel='icon' href='favicon.ico' type='image/x-icon')
+    link(rel='shortcut icon' href='favicon.ico' type='image/x-icon')
+
+    title Talkify
+  body
+    header
+      a(href="/")
+        img#logo(src='images/talkify.svg', alt='logo')
+      a(href="/")
+        h1.logo-text Talkify
+      .social
+        a(href='https://github.com/koziuu' target='_blank')
+          img(src='images/github.svg' alt='github')
+        a(href='https://discord.com/users/725816686296432761' target='_blank')
+          img(src='images/discord.svg' alt='discord')
+    .container-big
+      .container-small
+        p.desc-1.text-bold Witaj w Talkify! 😊
+        p.desc-4 Talkify to platforma, która pozwala na rozmowy z ludźmi z różnych zakątków świata.
+        p.desc-2.text-bold Co możesz zrobić na Talkify? 🚀
+        p.desc-4 🎉 Dołącz do Prywatnych Pokojów: Czatuj z przyjaciółmi w prywatnych czatach zabezpieczonych hasłami. Weź udział w rozmowach, które Cię pasjonują.
+        p.desc-4 🌈 Stwórz Swoje Własne Pokoje: Bądź gospodarzem i twórcą swojego własnego chatu, gdzie możesz dostosować ustawienia, wybierać tematy rozmów i zapraszać swoich znajomych.
+        p.desc-4 🌸 Szukaj Nowych Przyjaciół: Przeglądaj rozmowy z osobami, które pasują do Twoich preferencji i poznawaj ciekawych ludzi.
+        p.desc-4 😎 Udostępniaj Obrazki: Dziel się obrazami ze swoimi znajomymi i nadawaj rozmowom nowy wymiar.
+        p.desc-3.text-bold Zacznij chatować już teraz! 👋
+      .hr-vertical
+      .container-small.menu
+        a(href='/random').a-nav-img
+          p Losowy Chat
+          img(src="images/random.svg", alt="random-chat", srcset="").img-nav
+        a(href='/search-rooms').a-nav-img
+          p Dołącz do chatu
+          img(src="images/right.svg", alt="search-chat", srcset="").img-nav
+        a(href='/create-room').a-nav-img
+          p Stwórz pokój
+          img(src="images/send.svg", alt="create-chat", srcset="").img-nav

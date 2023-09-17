@@ -1,0 +1,168 @@
+.hr-vertical {
+    height: auto;
+    width: 1px;
+    background-color: #6b6b6b;
+    z-index: 100;
+}
+
+.desc-1 {
+    font-size: 30px;
+    margin: 0;
+    user-select: text;
+}
+
+.desc-2 {
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    user-select: text;
+}
+
+.desc-3 {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+    user-select: text;
+}
+
+.desc-4 {
+    font-size: 16px;
+    margin: 10px;
+    user-select: text;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-nav {
+    height: 42px;
+    width: 42px;
+}
+
+.a-nav-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    min-width: 260px;
+    height: 65px;
+    color: #000000;
+    font-size: 20px;
+    transition: all .5s;
+    /* background-color: #d6d6d6; */
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+
+    /* shadow */
+
+    -webkit-box-shadow: 12px 12px 24px -4px rgba(95, 95, 95, 1);
+    -moz-box-shadow: 12px 12px 24px -4px rgba(95, 95, 95, 1);
+    box-shadow: 12px 12px 24px -4px rgba(95, 95, 95, 1);
+
+    /* end of shadow */
+}
+
+.a-nav-img:hover {
+    min-width: 300px;
+    height: 70px;
+    font-size: 22px;
+}
+
+.container-big {
+    width: calc(100vw - 100px);
+    height: fit-content;
+    margin: 0 auto;
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    min-height: 64vh;
+    max-width: 100vw;
+}
+
+.container-small {
+    flex: 0 0 calc(50% - 10px);
+    height: min-content;
+    min-height: 64vh;
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10vh;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.a-text {
+    color: #000000;
+    font-weight: 100;
+}
+
+.a-text:hover {
+    color: #1b5b74;
+}
+
+.width-1 {
+    width: 20vw;
+}
+
+.width-2 {
+    width: 15vw;
+}
+
+.width-3 {
+    width: 10vw;
+}
+
+.width-4 {
+    width: 5vw;
+}
+
+.width-custom-table {
+    width: 20vw
+}
+
+.height-1 {
+    width: 20vh;
+}
+
+.height-2 {
+    width: 15vh;
+}
+
+.height-3 {
+    width: 10vh;
+}
+
+.height-4 {
+    width: 5vh;
+}

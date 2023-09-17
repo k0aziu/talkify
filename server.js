@@ -17,13 +17,21 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/chat", (req, res) => {
+app.get("/random", (req, res) => {
     res.render("chat")
 })
 
-app.get("/room", (req, res) => {
+app.get(/^\/room-[a-zA-Z0-9]+$/, (req, res) => {
     res.render("room")
 })
+
+app.get("/search-rooms", (req, res) => {
+    res.render("search")
+})
+
+app.use((req, res, next) => {
+    res.status(404).render("404");
+});
 
 const port = process.env.PORT || 3000
 server.listen(port, () => {

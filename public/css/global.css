@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-width: 500px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-family: 'REM', sans-serif;
+    max-height: fit-content;
+    min-height: fit-content;
+}
+
+header {
+    /* shadow start */
+    -webkit-box-shadow: 0px -50px 40px 50px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px -50px 40px 50px rgba(66, 68, 90, 1);
+    box-shadow: 0px -50px 40px 50px rgba(66, 68, 90, 1);
+    /* shadow end */
+
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    width: 100%;
+    min-width: 500px;
+    overflow: hidden;
+}
+
+p, h1, h3 {
+    font-family: 'REM', sans-serif;
+    user-select: none;
+}
+
+button, input {
+    font-family: 'REM', sans-serif;
+    font-size: 16px;
+    user-select: none;
+}
+
+#logo {
+    max-height: 70px;
+    height: 10vh;
+    user-select: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.logo-text {
+    font-size: 6vh;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1680aa;
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::selection {
+    background-color: #198dbb;
+    color: #e4e4e4;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
